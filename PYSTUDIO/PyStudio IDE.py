@@ -33,7 +33,8 @@ selected = False
 import webbrowser
 
 def run():
-
+    code = my_text.get('1.0', END)
+    exec(code)
 
 def callback():
     webbrowser.open_new(("https://github.com/Nathan-Busse"))
@@ -386,7 +387,8 @@ developer_menu.add_command ( label="Natham Busse"  )
 developer_menu.add_command ( label="Github" , command=callback  )
 
 # Run menu
-
+run_menu = Menu ( my_menu , tearoff=False )
+my_menu.add_cascade ( label="Run" , command=run )
 
 
 # Add Status Bar To Bottom Of App
