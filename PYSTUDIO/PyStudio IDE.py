@@ -32,6 +32,7 @@ selected = False
 
 import webbrowser
 
+# Run function is still in development and more features will be added.
 def run():
     code = my_text.get('1.0', END)
     exec(code)
